@@ -17,6 +17,7 @@
 		FF5429142A08370C0027A1A4 /* ArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5429132A08370C0027A1A4 /* ArticleResponse.swift */; };
 		FF5429162A0837760027A1A4 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5429152A0837760027A1A4 /* Article.swift */; };
 		FF5429192A083A490027A1A4 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5429182A083A490027A1A4 /* ApiService.swift */; };
+		FF54291B2A0841C50027A1A4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54291A2A0841C50027A1A4 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FF5429132A08370C0027A1A4 /* ArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponse.swift; sourceTree = "<group>"; };
 		FF5429152A0837760027A1A4 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		FF5429182A083A490027A1A4 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		FF54291A2A0841C50027A1A4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,6 @@
 				9A70D4C9EA2BE64595C4F007 /* Pods-ArticleApp.debug.xcconfig */,
 				1E99AAF89C04CE2781E98AFD /* Pods-ArticleApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,6 +97,7 @@
 				FF5429042A08191A0027A1A4 /* Assets.xcassets */,
 				FF5429062A08191A0027A1A4 /* LaunchScreen.storyboard */,
 				FF5429092A08191A0027A1A4 /* Info.plist */,
+				FF54291A2A0841C50027A1A4 /* HomeViewController.swift */,
 			);
 			path = ArticleApp;
 			sourceTree = "<group>";
@@ -237,6 +239,7 @@
 				FF5429192A083A490027A1A4 /* ApiService.swift in Sources */,
 				FF5428FE2A0819180027A1A4 /* SceneDelegate.swift in Sources */,
 				FF5429142A08370C0027A1A4 /* ArticleResponse.swift in Sources */,
+				FF54291B2A0841C50027A1A4 /* HomeViewController.swift in Sources */,
 				FF5429162A0837760027A1A4 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
