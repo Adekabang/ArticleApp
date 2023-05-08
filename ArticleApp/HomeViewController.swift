@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import SafariServices
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -79,8 +80,14 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let article =  latestArticleList[indexPath.row]
         
-        let alert = UIAlertController(title: article.title, message: article.description, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .default))
-        present(alert, animated: true)
+//        let alert = UIAlertController(title: article.title, message: article.description, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Okay", style: .default))
+//        present(alert, animated: true)
+        
+        if let url = URL(string: article.url) {
+            let controller = SFSafariViewController(url:url)
+            present(controller, animated: true)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
