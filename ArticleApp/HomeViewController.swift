@@ -11,6 +11,7 @@ import SafariServices
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    weak var refreshControl: UIRefreshControl!
     
     var latestArticleList: [Article] = []
     
@@ -21,11 +22,23 @@ class HomeViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let refreshControl = UIRefreshControl()
+        tableView.refreshControl = refreshControl
+        self.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        
+        refreshControl.beginRefreshing()
+        loadLatestArticle()
+    }
+    
+    @objc func refresh(_ sender: Any) {
         loadLatestArticle()
     }
     
     func loadLatestArticle() {
         ApiService.shared.loadLatestArticle { result in
+            self.refreshControl.endRefreshing()
             switch result {
             case .success(let articleList):
                 self.latestArticleList = articleList
