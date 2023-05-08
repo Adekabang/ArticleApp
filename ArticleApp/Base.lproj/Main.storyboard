@@ -76,31 +76,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sp6-3t-eZ3">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sp6-3t-eZ3">
                                                     <rect key="frame" x="20" y="10" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="21W-wJ-UaL"/>
                                                         <constraint firstAttribute="height" constant="80" id="tsv-bi-SvN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Title New Title New Title New Title New Title New Title " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na7-4m-i97">
-                                                    <rect key="frame" x="110" y="10" width="199" height="42.333333333333336"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="New Title New Title New Title New Title New Title New Title " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na7-4m-i97">
+                                                    <rect key="frame" x="109.99999999999999" y="10" width="232.66666666666663" height="42.333333333333336"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date &amp; Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfC-SJ-UaV">
-                                                    <rect key="frame" x="110" y="60.333333333333343" width="114" height="21"/>
+                                                    <rect key="frame" x="109.99999999999999" y="60.333333333333343" width="232.66666666666663" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyc-uz-kPP">
-                                                    <rect key="frame" x="317" y="32" width="36" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="0gX-2r-LXi"/>
-                                                        <constraint firstAttribute="width" constant="36" id="yvf-l2-csI"/>
-                                                    </constraints>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyc-uz-kPP">
+                                                    <rect key="frame" x="350.66666666666669" y="36.666666666666664" width="22.333333333333314" height="26.666666666666664"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="bookmark" catalog="system"/>
                                                 </button>
@@ -109,11 +105,12 @@
                                                 <constraint firstItem="tfC-SJ-UaV" firstAttribute="leading" secondItem="na7-4m-i97" secondAttribute="leading" id="29P-TS-ntt"/>
                                                 <constraint firstItem="tfC-SJ-UaV" firstAttribute="top" secondItem="na7-4m-i97" secondAttribute="bottom" constant="8" id="9iW-ck-a91"/>
                                                 <constraint firstItem="na7-4m-i97" firstAttribute="leading" secondItem="sp6-3t-eZ3" secondAttribute="trailing" constant="10" id="FSN-0y-zuQ"/>
-                                                <constraint firstItem="yyc-uz-kPP" firstAttribute="centerY" secondItem="X1G-xE-90q" secondAttribute="centerY" id="IAq-tp-od1"/>
+                                                <constraint firstItem="tfC-SJ-UaV" firstAttribute="trailing" secondItem="na7-4m-i97" secondAttribute="trailing" id="KoG-eJ-mLP"/>
                                                 <constraint firstItem="sp6-3t-eZ3" firstAttribute="top" secondItem="X1G-xE-90q" secondAttribute="top" constant="10" id="Png-Lv-p6X"/>
+                                                <constraint firstItem="yyc-uz-kPP" firstAttribute="centerY" secondItem="X1G-xE-90q" secondAttribute="centerY" priority="999" id="Uk9-ji-cM2"/>
+                                                <constraint firstAttribute="trailing" secondItem="yyc-uz-kPP" secondAttribute="trailing" constant="20" id="ZIr-O5-Nvm"/>
+                                                <constraint firstItem="yyc-uz-kPP" firstAttribute="leading" secondItem="na7-4m-i97" secondAttribute="trailing" constant="8" id="c6e-7h-WWA"/>
                                                 <constraint firstItem="sp6-3t-eZ3" firstAttribute="leading" secondItem="X1G-xE-90q" secondAttribute="leading" constant="20" id="hfp-Ot-sp8"/>
-                                                <constraint firstItem="yyc-uz-kPP" firstAttribute="leading" secondItem="na7-4m-i97" secondAttribute="trailing" constant="8" id="rGf-V2-Bsi"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="yyc-uz-kPP" secondAttribute="trailing" constant="20" id="snI-0C-bzw"/>
                                                 <constraint firstItem="na7-4m-i97" firstAttribute="top" secondItem="sp6-3t-eZ3" secondAttribute="top" id="x6n-Bi-ptM"/>
                                                 <constraint firstAttribute="bottom" secondItem="sp6-3t-eZ3" secondAttribute="bottom" constant="10" id="xPa-m2-qmL"/>
                                             </constraints>

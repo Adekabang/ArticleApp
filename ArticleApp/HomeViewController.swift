@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -42,10 +43,32 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "article_cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "custom_article_cell", for: indexPath) as! ArticleViewCell
         
         let article = latestArticleList[indexPath.row]
-        cell.textLabel?.text = "\(indexPath.row + 1). \(article.title)"
+//        cell.textLabel?.text = "\(indexPath.row + 1). \(article.title)"
+        cell.titleLabel.text = article.title
+        
+        let dateString = article.date
+        let dateFormatter = DateFormatter()
+    
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ" //2023-05-06T18:25:28Z
+        var articleDate = ""
+        
+        if let date = dateFormatter.date(from: dateString) {
+            dateFormatter.dateFormat = "MMM dd, yyyy" //May 06, 2023
+            let readableDateString = dateFormatter.string(from: date)
+            articleDate = readableDateString
+        }
+
+        cell.dateLabel.text = "\(articleDate) · \(article.source)"
+        
+        let url = article.image
+        if !url.isEmpty {
+            cell.thumbImageView.sd_setImage(with: URL(string: url))
+        } else {
+            cell.thumbImageView.image = nil
+        }
         
         return cell
     }

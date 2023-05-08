@@ -7,5 +7,6 @@ target 'ArticleApp' do
 
   # Pods for ArticleApp
   pod 'Alamofire'
+  pod 'SDWebImage'
 
 end
