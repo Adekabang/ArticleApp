@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		892941DF56C9A22DF35DE1B2 /* Pods_ArticleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF169EF561DD21922EED08EF /* Pods_ArticleApp.framework */; };
+		FF221CDA2A08DAF80007EC27 /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF221CD92A08DAF80007EC27 /* ArticleViewCell.swift */; };
 		FF5428FC2A0819180027A1A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5428FB2A0819180027A1A4 /* AppDelegate.swift */; };
 		FF5428FE2A0819180027A1A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5428FD2A0819180027A1A4 /* SceneDelegate.swift */; };
 		FF5429002A0819180027A1A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5428FF2A0819180027A1A4 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		1E99AAF89C04CE2781E98AFD /* Pods-ArticleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticleApp.release.xcconfig"; path = "Target Support Files/Pods-ArticleApp/Pods-ArticleApp.release.xcconfig"; sourceTree = "<group>"; };
 		9A70D4C9EA2BE64595C4F007 /* Pods-ArticleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticleApp.debug.xcconfig"; path = "Target Support Files/Pods-ArticleApp/Pods-ArticleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AF169EF561DD21922EED08EF /* Pods_ArticleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArticleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF221CD92A08DAF80007EC27 /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
 		FF5428F82A0819180027A1A4 /* ArticleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArticleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5428FB2A0819180027A1A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF5428FD2A0819180027A1A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FF221CD82A08DA9A0007EC27 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FF221CD92A08DAF80007EC27 /* ArticleViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		FF5428EF2A0819180027A1A4 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		FF5428FA2A0819180027A1A4 /* ArticleApp */ = {
 			isa = PBXGroup;
 			children = (
+				FF221CD82A08DA9A0007EC27 /* Home */,
 				FF5429172A083A380027A1A4 /* Services */,
 				FF5429122A0836FC0027A1A4 /* Models */,
 				FF5428FB2A0819180027A1A4 /* AppDelegate.swift */,
@@ -241,6 +252,7 @@
 				FF5429142A08370C0027A1A4 /* ArticleResponse.swift in Sources */,
 				FF54291B2A0841C50027A1A4 /* HomeViewController.swift in Sources */,
 				FF5429162A0837760027A1A4 /* Article.swift in Sources */,
+				FF221CDA2A08DAF80007EC27 /* ArticleViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
