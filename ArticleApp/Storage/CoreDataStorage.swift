@@ -68,6 +68,8 @@ class CoreDataStorage {
         if let data = try? context.fetch(fetchRequest).first {
             context.delete(data)
             
+            NotificationCenter.default.post(name: .deleteReadingList, object: nil)
+            
             try? context.save()
         }
     }

@@ -32,8 +32,14 @@ class HomeViewController: UIViewController {
         self.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.readingListDeleted(_:)), name: .deleteReadingList, object: nil)
+        
         refreshControl.beginRefreshing()
         loadLatestArticle()
+    }
+    
+    @objc func readingListDeleted(_ sender: Any){
+        tableView.reloadData()
     }
     
     @objc func refresh(_ sender: Any) {
