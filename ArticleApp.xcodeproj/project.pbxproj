@@ -25,6 +25,7 @@
 		FF662EE12A0BE0F60035154C /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF662EE02A0BE0F60035154C /* CoreDataStorage.swift */; };
 		FFC7C9EC2A0C01FB00D4FED3 /* ReadingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7C9EB2A0C01FB00D4FED3 /* ReadingListViewController.swift */; };
 		FFC7C9EE2A0C043800D4FED3 /* ArticleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC7C9ED2A0C043800D4FED3 /* ArticleViewCell.xib */; };
+		FFC7C9F12A0C0BC300D4FED3 /* NotificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7C9F02A0C0BC300D4FED3 /* NotificationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		FF662EE02A0BE0F60035154C /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		FFC7C9EB2A0C01FB00D4FED3 /* ReadingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListViewController.swift; sourceTree = "<group>"; };
 		FFC7C9ED2A0C043800D4FED3 /* ArticleViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleViewCell.xib; sourceTree = "<group>"; };
+		FFC7C9F02A0C0BC300D4FED3 /* NotificationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		FF5428FA2A0819180027A1A4 /* ArticleApp */ = {
 			isa = PBXGroup;
 			children = (
+				FFC7C9EF2A0C0BB000D4FED3 /* Extensions */,
 				FFC7C9EA2A0C01D100D4FED3 /* ReadingList */,
 				FF221CD82A08DA9A0007EC27 /* Home */,
 				FF5429172A083A380027A1A4 /* Services */,
@@ -162,6 +165,14 @@
 				FFC7C9EB2A0C01FB00D4FED3 /* ReadingListViewController.swift */,
 			);
 			path = ReadingList;
+			sourceTree = "<group>";
+		};
+		FFC7C9EF2A0C0BB000D4FED3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFC7C9F02A0C0BC300D4FED3 /* NotificationExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +295,7 @@
 				FF662EDE2A0BDC440035154C /* ArticleApp.xcdatamodeld in Sources */,
 				FF5429002A0819180027A1A4 /* ViewController.swift in Sources */,
 				FF5428FC2A0819180027A1A4 /* AppDelegate.swift in Sources */,
+				FFC7C9F12A0C0BC300D4FED3 /* NotificationExtensions.swift in Sources */,
 				FF662ED92A0B86DD0035154C /* TopArticleListViewCell.swift in Sources */,
 				FF5429192A083A490027A1A4 /* ApiService.swift in Sources */,
 				FF5428FE2A0819180027A1A4 /* SceneDelegate.swift in Sources */,

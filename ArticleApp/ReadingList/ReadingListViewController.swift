@@ -22,10 +22,16 @@ class ReadingListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.readingListAdded(_:)), name: .addReadingList, object: nil)
+        
         loadReadingList()
     }
     
-
+    @objc func readingListAdded(_ sender:Any) {
+        loadReadingList()
+        tableView.reloadData()
+    }
+    
     func loadReadingList() {
         readingList = CoreDataStorage.shared.getReadingList()
     }

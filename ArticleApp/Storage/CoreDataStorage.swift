@@ -49,6 +49,8 @@ class CoreDataStorage {
         articleData.source = article.source
         articleData.title = article.title
         articleData.url = article.url
+        
+        NotificationCenter.default.post(name: .addReadingList, object: nil)
                 
         try? context.save()
     }
