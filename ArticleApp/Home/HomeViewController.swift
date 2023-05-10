@@ -224,6 +224,9 @@ extension HomeViewController: ArticleViewCellDelegate {
                 cell.bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
             }
             cell.bookmarkButton.isEnabled = false
+            
+            let dataArticle = CoreDataStorage.shared.getReadingList()
+            print(dataArticle.count)
         }
     }
     

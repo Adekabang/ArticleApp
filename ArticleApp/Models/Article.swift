@@ -36,4 +36,14 @@ struct Article: Decodable{
         self.image = try container.decodeIfPresent(String.self, forKey: .image) ?? "https://via.placeholder.com/600x400?text=No+Image"
         self.date = try container.decodeIfPresent(String.self, forKey: .date) ?? "" 
     }
+    
+    init(author: String, url: String, source: String, title: String, articleDescription: String, image: String, date: String){
+        self.author = author
+        self.url = url
+        self.source = source
+        self.title = title
+        self.description = articleDescription
+        self.image = image
+        self.date = date
+    }
 }

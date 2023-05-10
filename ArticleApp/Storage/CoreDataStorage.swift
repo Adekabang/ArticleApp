@@ -52,4 +52,25 @@ class CoreDataStorage {
                 
         try? context.save()
     }
+    
+    func getReadingList() -> [Article] {
+        let fetchRequest = ArticleData.fetchRequest()
+        let datas = (try? context.fetch(fetchRequest)) ?? []
+        let articleList = datas.compactMap { $0.dto }
+        return articleList
+    }
+}
+
+extension ArticleData {
+    var dto: Article {
+        let article = Article(
+            author: self.author ?? "",
+            url: self.url ?? "",
+            source: self.source ?? "",
+            title: self.title ?? "",
+            articleDescription: self.articleDescription ?? "",
+            image: self.image ?? "",
+            date: self.date ?? "")
+        return article
+    }
 }
