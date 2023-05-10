@@ -23,6 +23,8 @@
 		FF662EDB2A0B936B0035154C /* TopArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF662EDA2A0B936B0035154C /* TopArticleViewCell.swift */; };
 		FF662EDE2A0BDC440035154C /* ArticleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF662EDC2A0BDC440035154C /* ArticleApp.xcdatamodeld */; };
 		FF662EE12A0BE0F60035154C /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF662EE02A0BE0F60035154C /* CoreDataStorage.swift */; };
+		FFC7C9EC2A0C01FB00D4FED3 /* ReadingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7C9EB2A0C01FB00D4FED3 /* ReadingListViewController.swift */; };
+		FFC7C9EE2A0C043800D4FED3 /* ArticleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC7C9ED2A0C043800D4FED3 /* ArticleViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		FF662EDA2A0B936B0035154C /* TopArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArticleViewCell.swift; sourceTree = "<group>"; };
 		FF662EDD2A0BDC440035154C /* ArticleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArticleApp.xcdatamodel; sourceTree = "<group>"; };
 		FF662EE02A0BE0F60035154C /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		FFC7C9EB2A0C01FB00D4FED3 /* ReadingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListViewController.swift; sourceTree = "<group>"; };
+		FFC7C9ED2A0C043800D4FED3 /* ArticleViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 				FF54291A2A0841C50027A1A4 /* HomeViewController.swift */,
 				FF662ED82A0B86DD0035154C /* TopArticleListViewCell.swift */,
 				FF662EDA2A0B936B0035154C /* TopArticleViewCell.swift */,
+				FFC7C9ED2A0C043800D4FED3 /* ArticleViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 		FF5428FA2A0819180027A1A4 /* ArticleApp */ = {
 			isa = PBXGroup;
 			children = (
+				FFC7C9EA2A0C01D100D4FED3 /* ReadingList */,
 				FF221CD82A08DA9A0007EC27 /* Home */,
 				FF5429172A083A380027A1A4 /* Services */,
 				FF662EDF2A0BE0DA0035154C /* Storage */,
@@ -148,6 +154,14 @@
 				FF662EE02A0BE0F60035154C /* CoreDataStorage.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		FFC7C9EA2A0C01D100D4FED3 /* ReadingList */ = {
+			isa = PBXGroup;
+			children = (
+				FFC7C9EB2A0C01FB00D4FED3 /* ReadingListViewController.swift */,
+			);
+			path = ReadingList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +227,7 @@
 				FF5429082A08191A0027A1A4 /* LaunchScreen.storyboard in Resources */,
 				FF5429052A08191A0027A1A4 /* Assets.xcassets in Resources */,
 				FF5429032A0819180027A1A4 /* Main.storyboard in Resources */,
+				FFC7C9EE2A0C043800D4FED3 /* ArticleViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +289,7 @@
 				FF5428FE2A0819180027A1A4 /* SceneDelegate.swift in Sources */,
 				FF662EDB2A0B936B0035154C /* TopArticleViewCell.swift in Sources */,
 				FF5429142A08370C0027A1A4 /* ArticleResponse.swift in Sources */,
+				FFC7C9EC2A0C01FB00D4FED3 /* ReadingListViewController.swift in Sources */,
 				FF54291B2A0841C50027A1A4 /* HomeViewController.swift in Sources */,
 				FF5429162A0837760027A1A4 /* Article.swift in Sources */,
 				FF221CDA2A08DAF80007EC27 /* ArticleViewCell.swift in Sources */,

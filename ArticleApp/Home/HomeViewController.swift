@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.register(UINib(nibName: "ArticleViewCell", bundle: nil), forCellReuseIdentifier: "custom_article_cell")
         
         tableView.delegate = self
         tableView.dataSource = self

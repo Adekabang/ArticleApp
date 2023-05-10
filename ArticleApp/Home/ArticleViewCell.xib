@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="custom_article_cell" rowHeight="100" id="Tcj-Fo-YmJ" customClass="ArticleViewCell" customModule="ArticleApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tcj-Fo-YmJ" id="ADu-9O-MPf">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-HP-Kr4">
+                        <rect key="frame" x="20" y="10" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="RFX-tQ-5zB"/>
+                            <constraint firstAttribute="width" constant="80" id="V0N-ek-Kh3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="New Title New Title New Title New Title New Title New Title " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5q1-JS-ves">
+                        <rect key="frame" x="109.99999999999999" y="10" width="232.66666666666663" height="42.333333333333336"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date &amp; Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59x-xf-XHY">
+                        <rect key="frame" x="109.99999999999999" y="60.333333333333343" width="232.66666666666663" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rui-vL-hY0">
+                        <rect key="frame" x="350.66666666666669" y="36.666666666666664" width="22.333333333333314" height="26.666666666666664"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="bookmark" catalog="system"/>
+                        <connections>
+                            <action selector="bookmarkButtonTapped:" destination="Tcj-Fo-YmJ" eventType="touchUpInside" id="EyZ-8Z-LRX"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eCM-HP-Kr4" firstAttribute="leading" secondItem="ADu-9O-MPf" secondAttribute="leading" constant="20" id="5KA-Mc-EnA"/>
+                    <constraint firstItem="rui-vL-hY0" firstAttribute="leading" secondItem="5q1-JS-ves" secondAttribute="trailing" constant="8" id="E0f-YC-Fnv"/>
+                    <constraint firstItem="5q1-JS-ves" firstAttribute="leading" secondItem="eCM-HP-Kr4" secondAttribute="trailing" constant="10" id="MGX-D5-NnF"/>
+                    <constraint firstItem="59x-xf-XHY" firstAttribute="top" secondItem="5q1-JS-ves" secondAttribute="bottom" constant="8" id="Rhn-Ue-561"/>
+                    <constraint firstItem="5q1-JS-ves" firstAttribute="top" secondItem="eCM-HP-Kr4" secondAttribute="top" id="UyE-c8-Yh5"/>
+                    <constraint firstItem="eCM-HP-Kr4" firstAttribute="top" secondItem="ADu-9O-MPf" secondAttribute="top" constant="10" id="cd1-Ph-FWc"/>
+                    <constraint firstAttribute="bottom" secondItem="eCM-HP-Kr4" secondAttribute="bottom" constant="10" id="kXN-FA-XXl"/>
+                    <constraint firstItem="59x-xf-XHY" firstAttribute="leading" secondItem="5q1-JS-ves" secondAttribute="leading" id="v9i-vS-FR2"/>
+                    <constraint firstItem="59x-xf-XHY" firstAttribute="trailing" secondItem="5q1-JS-ves" secondAttribute="trailing" id="vXw-Dg-chI"/>
+                    <constraint firstAttribute="trailing" secondItem="rui-vL-hY0" secondAttribute="trailing" constant="20" id="vch-Ps-sNc"/>
+                    <constraint firstItem="rui-vL-hY0" firstAttribute="centerY" secondItem="ADu-9O-MPf" secondAttribute="centerY" priority="999" id="zTo-jR-sHq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bookmarkButton" destination="rui-vL-hY0" id="2uf-97-D3r"/>
+                <outlet property="dateLabel" destination="59x-xf-XHY" id="ImA-cQ-UHn"/>
+                <outlet property="thumbImageView" destination="eCM-HP-Kr4" id="sE5-UL-QFe"/>
+                <outlet property="titleLabel" destination="5q1-JS-ves" id="Eij-Vq-Mio"/>
+            </connections>
+            <point key="canvasLocation" x="-40" y="-4"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bookmark" catalog="system" width="110" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

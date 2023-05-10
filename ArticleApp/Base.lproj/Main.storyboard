@@ -29,14 +29,29 @@
         <!--Reading List-->
         <scene sceneID="cLe-bl-zNp">
             <objects>
-                <viewController id="7lR-xx-7y1" sceneMemberID="viewController">
+                <viewController id="7lR-xx-7y1" customClass="ReadingListViewController" customModule="ArticleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mnf-Ez-wLp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wq1-Xt-gHZ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NJI-fp-Z1u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NJI-fp-Z1u" firstAttribute="trailing" secondItem="wq1-Xt-gHZ" secondAttribute="trailing" id="78R-V0-q7t"/>
+                            <constraint firstItem="wq1-Xt-gHZ" firstAttribute="top" secondItem="NJI-fp-Z1u" secondAttribute="top" id="SYB-UY-wAP"/>
+                            <constraint firstItem="NJI-fp-Z1u" firstAttribute="bottom" secondItem="wq1-Xt-gHZ" secondAttribute="bottom" id="fCm-mO-1Zx"/>
+                            <constraint firstItem="wq1-Xt-gHZ" firstAttribute="leading" secondItem="NJI-fp-Z1u" secondAttribute="leading" id="u58-Wc-8u2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reading List" id="qBN-30-eZS"/>
+                    <connections>
+                        <outlet property="tableView" destination="wq1-Xt-gHZ" id="uld-xz-vaq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCj-FY-uGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,64 +86,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="custom_article_cell" rowHeight="100" id="ne6-SK-PC8" customClass="ArticleViewCell" customModule="ArticleApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ne6-SK-PC8" id="X1G-xE-90q">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sp6-3t-eZ3">
-                                                    <rect key="frame" x="20" y="10" width="80" height="80"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="21W-wJ-UaL"/>
-                                                        <constraint firstAttribute="height" constant="80" id="tsv-bi-SvN"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="New Title New Title New Title New Title New Title New Title " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na7-4m-i97">
-                                                    <rect key="frame" x="109.99999999999999" y="10" width="232.66666666666663" height="42.333333333333336"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date &amp; Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfC-SJ-UaV">
-                                                    <rect key="frame" x="109.99999999999999" y="60.333333333333343" width="232.66666666666663" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyc-uz-kPP">
-                                                    <rect key="frame" x="350.66666666666669" y="36.666666666666664" width="22.333333333333314" height="26.666666666666664"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="bookmark" catalog="system"/>
-                                                    <connections>
-                                                        <action selector="bookmarkButtonTapped:" destination="ne6-SK-PC8" eventType="touchUpInside" id="hJF-a7-nfN"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="tfC-SJ-UaV" firstAttribute="leading" secondItem="na7-4m-i97" secondAttribute="leading" id="29P-TS-ntt"/>
-                                                <constraint firstItem="tfC-SJ-UaV" firstAttribute="top" secondItem="na7-4m-i97" secondAttribute="bottom" constant="8" id="9iW-ck-a91"/>
-                                                <constraint firstItem="na7-4m-i97" firstAttribute="leading" secondItem="sp6-3t-eZ3" secondAttribute="trailing" constant="10" id="FSN-0y-zuQ"/>
-                                                <constraint firstItem="tfC-SJ-UaV" firstAttribute="trailing" secondItem="na7-4m-i97" secondAttribute="trailing" id="KoG-eJ-mLP"/>
-                                                <constraint firstItem="sp6-3t-eZ3" firstAttribute="top" secondItem="X1G-xE-90q" secondAttribute="top" constant="10" id="Png-Lv-p6X"/>
-                                                <constraint firstItem="yyc-uz-kPP" firstAttribute="centerY" secondItem="X1G-xE-90q" secondAttribute="centerY" priority="999" id="Uk9-ji-cM2"/>
-                                                <constraint firstAttribute="trailing" secondItem="yyc-uz-kPP" secondAttribute="trailing" constant="20" id="ZIr-O5-Nvm"/>
-                                                <constraint firstItem="yyc-uz-kPP" firstAttribute="leading" secondItem="na7-4m-i97" secondAttribute="trailing" constant="8" id="c6e-7h-WWA"/>
-                                                <constraint firstItem="sp6-3t-eZ3" firstAttribute="leading" secondItem="X1G-xE-90q" secondAttribute="leading" constant="20" id="hfp-Ot-sp8"/>
-                                                <constraint firstItem="na7-4m-i97" firstAttribute="top" secondItem="sp6-3t-eZ3" secondAttribute="top" id="x6n-Bi-ptM"/>
-                                                <constraint firstAttribute="bottom" secondItem="sp6-3t-eZ3" secondAttribute="bottom" constant="10" id="xPa-m2-qmL"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="bookmarkButton" destination="yyc-uz-kPP" id="cJt-tu-XQ4"/>
-                                            <outlet property="dateLabel" destination="tfC-SJ-UaV" id="RDS-Gh-Zp9"/>
-                                            <outlet property="thumbImageView" destination="sp6-3t-eZ3" id="iMO-PY-pdS"/>
-                                            <outlet property="titleLabel" destination="na7-4m-i97" id="j7e-5M-SI7"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="top_article_list_cell" rowHeight="367" id="wwg-YP-Bud" customClass="TopArticleListViewCell" customModule="ArticleApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="193.66666793823242" width="393" height="367"/>
+                                        <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wwg-YP-Bud" id="TJd-LD-PMp">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="367"/>
@@ -315,7 +274,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
