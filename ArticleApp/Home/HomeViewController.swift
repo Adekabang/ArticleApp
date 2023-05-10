@@ -112,6 +112,8 @@ extension HomeViewController: UITableViewDataSource {
                 cell.thumbImageView.image = nil
             }
             
+            cell.delegate = self
+            
             return cell
         }
     }
@@ -207,4 +209,15 @@ extension HomeViewController: TopArticleListViewCellDelegate {
         let page = cell.pageControl.currentPage
         collectionView?.scrollToItem(at: IndexPath(item: page, section: 0), at: .centeredHorizontally, animated: true)
     }
+}
+
+// MARK: - ArticleViewCellDelegate
+extension HomeViewController: ArticleViewCellDelegate {
+    func ArticleViewCellBookmarkButtonTapped(_ cell: ArticleViewCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            let article = latestArticleList[indexPath.row]
+            print(article.title)
+        }
+    }
+    
 }

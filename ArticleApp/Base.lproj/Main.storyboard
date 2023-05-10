@@ -101,6 +101,9 @@
                                                     <rect key="frame" x="350.66666666666669" y="36.666666666666664" width="22.333333333333314" height="26.666666666666664"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="bookmark" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="bookmarkButtonTapped:" destination="ne6-SK-PC8" eventType="touchUpInside" id="hJF-a7-nfN"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

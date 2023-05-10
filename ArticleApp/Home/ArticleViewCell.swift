@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol ArticleViewCellDelegate: AnyObject {
+    func ArticleViewCellBookmarkButtonTapped(_ cell: ArticleViewCell)
+}
+
 class ArticleViewCell: UITableViewCell {
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var bookmarkButton: UIButton!
+    
+    weak var delegate: ArticleViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,5 +35,9 @@ class ArticleViewCell: UITableViewCell {
         thumbImageView.layer.cornerRadius = 8
         thumbImageView.layer.masksToBounds = true
     }
-
+    
+    @IBAction func bookmarkButtonTapped(_ sender: Any) {
+        delegate?.ArticleViewCellBookmarkButtonTapped(self)
+    }
+    
 }
