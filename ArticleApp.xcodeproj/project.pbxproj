@@ -73,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				FF221CD92A08DAF80007EC27 /* ArticleViewCell.swift */,
+				FF54291A2A0841C50027A1A4 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -108,7 +109,6 @@
 				FF5429042A08191A0027A1A4 /* Assets.xcassets */,
 				FF5429062A08191A0027A1A4 /* LaunchScreen.storyboard */,
 				FF5429092A08191A0027A1A4 /* Info.plist */,
-				FF54291A2A0841C50027A1A4 /* HomeViewController.swift */,
 			);
 			path = ArticleApp;
 			sourceTree = "<group>";
