@@ -21,6 +21,8 @@
 		FF54291B2A0841C50027A1A4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54291A2A0841C50027A1A4 /* HomeViewController.swift */; };
 		FF662ED92A0B86DD0035154C /* TopArticleListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF662ED82A0B86DD0035154C /* TopArticleListViewCell.swift */; };
 		FF662EDB2A0B936B0035154C /* TopArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF662EDA2A0B936B0035154C /* TopArticleViewCell.swift */; };
+		FF662EDE2A0BDC440035154C /* ArticleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF662EDC2A0BDC440035154C /* ArticleApp.xcdatamodeld */; };
+		FF662EE12A0BE0F60035154C /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF662EE02A0BE0F60035154C /* CoreDataStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		FF54291A2A0841C50027A1A4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF662ED82A0B86DD0035154C /* TopArticleListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArticleListViewCell.swift; sourceTree = "<group>"; };
 		FF662EDA2A0B936B0035154C /* TopArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArticleViewCell.swift; sourceTree = "<group>"; };
+		FF662EDD2A0BDC440035154C /* ArticleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArticleApp.xcdatamodel; sourceTree = "<group>"; };
+		FF662EE02A0BE0F60035154C /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			children = (
 				FF221CD82A08DA9A0007EC27 /* Home */,
 				FF5429172A083A380027A1A4 /* Services */,
+				FF662EDF2A0BE0DA0035154C /* Storage */,
 				FF5429122A0836FC0027A1A4 /* Models */,
 				FF5428FB2A0819180027A1A4 /* AppDelegate.swift */,
 				FF5428FD2A0819180027A1A4 /* SceneDelegate.swift */,
@@ -115,6 +120,7 @@
 				FF5429042A08191A0027A1A4 /* Assets.xcassets */,
 				FF5429062A08191A0027A1A4 /* LaunchScreen.storyboard */,
 				FF5429092A08191A0027A1A4 /* Info.plist */,
+				FF662EDC2A0BDC440035154C /* ArticleApp.xcdatamodeld */,
 			);
 			path = ArticleApp;
 			sourceTree = "<group>";
@@ -134,6 +140,14 @@
 				FF5429182A083A490027A1A4 /* ApiService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FF662EDF2A0BE0DA0035154C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				FF662EE02A0BE0F60035154C /* CoreDataStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF662EE12A0BE0F60035154C /* CoreDataStorage.swift in Sources */,
+				FF662EDE2A0BDC440035154C /* ArticleApp.xcdatamodeld in Sources */,
 				FF5429002A0819180027A1A4 /* ViewController.swift in Sources */,
 				FF5428FC2A0819180027A1A4 /* AppDelegate.swift in Sources */,
 				FF662ED92A0B86DD0035154C /* TopArticleListViewCell.swift in Sources */,
@@ -484,6 +500,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FF662EDC2A0BDC440035154C /* ArticleApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FF662EDD2A0BDC440035154C /* ArticleApp.xcdatamodel */,
+			);
+			currentVersion = FF662EDD2A0BDC440035154C /* ArticleApp.xcdatamodel */;
+			path = ArticleApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FF5428F02A0819180027A1A4 /* Project object */;
 }

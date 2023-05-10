@@ -217,6 +217,13 @@ extension HomeViewController: ArticleViewCellDelegate {
         if let indexPath = tableView.indexPath(for: cell) {
             let article = latestArticleList[indexPath.row]
             print(article.title)
+            
+            CoreDataStorage.shared.addReadingList(article: article)
+            
+            if #available(iOS 13.0, *) {
+                cell.bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            }
+            cell.bookmarkButton.isEnabled = false
         }
     }
     
