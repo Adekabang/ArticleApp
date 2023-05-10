@@ -26,6 +26,7 @@
 		FFC7C9EC2A0C01FB00D4FED3 /* ReadingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7C9EB2A0C01FB00D4FED3 /* ReadingListViewController.swift */; };
 		FFC7C9EE2A0C043800D4FED3 /* ArticleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC7C9ED2A0C043800D4FED3 /* ArticleViewCell.xib */; };
 		FFC7C9F12A0C0BC300D4FED3 /* NotificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7C9F02A0C0BC300D4FED3 /* NotificationExtensions.swift */; };
+		FFC7C9F72A0C177900D4FED3 /* AnnouncementViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7C9F62A0C177900D4FED3 /* AnnouncementViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FFC7C9EB2A0C01FB00D4FED3 /* ReadingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListViewController.swift; sourceTree = "<group>"; };
 		FFC7C9ED2A0C043800D4FED3 /* ArticleViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleViewCell.xib; sourceTree = "<group>"; };
 		FFC7C9F02A0C0BC300D4FED3 /* NotificationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtensions.swift; sourceTree = "<group>"; };
+		FFC7C9F62A0C177900D4FED3 /* AnnouncementViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				FF662ED82A0B86DD0035154C /* TopArticleListViewCell.swift */,
 				FF662EDA2A0B936B0035154C /* TopArticleViewCell.swift */,
 				FFC7C9ED2A0C043800D4FED3 /* ArticleViewCell.xib */,
+				FFC7C9F62A0C177900D4FED3 /* AnnouncementViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				FFC7C9EC2A0C01FB00D4FED3 /* ReadingListViewController.swift in Sources */,
 				FF54291B2A0841C50027A1A4 /* HomeViewController.swift in Sources */,
 				FF5429162A0837760027A1A4 /* Article.swift in Sources */,
+				FFC7C9F72A0C177900D4FED3 /* AnnouncementViewCell.swift in Sources */,
 				FF221CDA2A08DAF80007EC27 /* ArticleViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -64,11 +64,13 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
+            return latestArticleList.count > 0 ? 1 : 0
+        } else if section == 1 {
             return latestArticleList.count > 0 ? 1 : 0
         } else {
             return latestArticleList.count
@@ -77,6 +79,35 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "announcement_cell", for: indexPath) as! AnnouncementViewCell
+            let mainText = NSMutableAttributedString(
+                string: "Covid-19 News: ",
+                attributes: [
+                    NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.semibold),
+                    NSAttributedString.Key.foregroundColor: UIColor.systemBlue.cgColor
+            ])
+            
+            if #available(iOS 13.0, *) {
+                mainText.append(NSAttributedString(
+                    string: "See the latest coverage about Covid-19",
+                    attributes: [
+                        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular),
+                        NSAttributedString.Key.foregroundColor: UIColor.secondaryLabel.cgColor
+                    ])
+                )
+            } else {
+                mainText.append(NSAttributedString(
+                    string: "See the latest coverage about Covid-19",
+                    attributes: [
+                        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular),
+                        NSAttributedString.Key.foregroundColor: UIColor.systemGray.cgColor
+                    ])
+                )
+            }
+            cell.announcementLabel.attributedText = mainText
+            
+            return cell
+        } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "top_article_list_cell", for: indexPath) as! TopArticleListViewCell
             
             cell.titleLabel.text = "Articles for You"
@@ -141,7 +172,7 @@ extension HomeViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard indexPath.section == 1 else {
+        guard indexPath.section == 2 else {
             return
         }
         
@@ -196,7 +227,7 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
+extension HomeViewController: UICollectionViewDelegateFlowLayout { 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
