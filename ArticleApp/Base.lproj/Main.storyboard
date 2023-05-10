@@ -143,11 +143,11 @@
                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="peV-ur-Mwh">
-                                                    <rect key="frame" x="0.0" y="79" width="393" height="200"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="peV-ur-Mwh">
+                                                    <rect key="frame" x="0.0" y="79" width="393" height="256"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="200" id="OUo-yv-GXG"/>
+                                                        <constraint firstAttribute="height" constant="256" id="OUo-yv-GXG"/>
                                                     </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R75-1A-dSM">
                                                         <size key="itemSize" width="395" height="200"/>
@@ -157,7 +157,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="top_article_cell" id="BPO-wH-Xbk" customClass="TopArticleViewCell" customModule="ArticleApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="395" height="200"/>
+                                                            <rect key="frame" x="0.0" y="28" width="395" height="200"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UHa-95-kaA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="395" height="200"/>
@@ -202,7 +202,7 @@
                                                     </cells>
                                                 </collectionView>
                                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hza-rD-fmW">
-                                                    <rect key="frame" x="20" y="279" width="353" height="88"/>
+                                                    <rect key="frame" x="20" y="335" width="353" height="32"/>
                                                     <color key="pageIndicatorTintColor" systemColor="separatorColor"/>
                                                     <color key="currentPageIndicatorTintColor" name="AccentColor"/>
                                                 </pageControl>
