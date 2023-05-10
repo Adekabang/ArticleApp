@@ -113,6 +113,18 @@ extension HomeViewController: UITableViewDataSource {
                 cell.thumbImageView.image = nil
             }
             
+            if CoreDataStorage.shared.isAddedToReadingList(url: article.url){
+                if #available(iOS 13.0, *) {
+                    cell.bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+                }
+                cell.bookmarkButton.isEnabled = false
+            } else {
+                if #available(iOS 13.0, *) {
+                    cell.bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+                }
+                cell.bookmarkButton.isEnabled = true
+            }
+            
             cell.delegate = self
             
             return cell

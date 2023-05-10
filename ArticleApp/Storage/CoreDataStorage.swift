@@ -71,6 +71,16 @@ class CoreDataStorage {
             try? context.save()
         }
     }
+    
+    func isAddedToReadingList(url: String) -> Bool {
+        let fetchRequest = ArticleData.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "url == %@", url)
+        if (try? context.fetch(fetchRequest).first) != nil {
+            return true
+        } else {
+            return false
+        }
+    }
 }
 
 extension ArticleData {
