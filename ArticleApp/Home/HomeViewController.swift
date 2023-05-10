@@ -73,6 +73,10 @@ extension HomeViewController: UITableViewDataSource {
             cell.subtitleLabel.text = "Top \(latestArticleList.count) Articles for You"
             cell.pageControl.numberOfPages = latestArticleList.count
             
+            cell.collectionView.dataSource = self
+//            cell.collectionView.delegate = self
+            cell.collectionView.reloadData()
+            
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "custom_article_cell", for: indexPath) as! ArticleViewCell
@@ -124,5 +128,41 @@ extension HomeViewController: UITableViewDelegate {
             present(controller, animated: true)
         }
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return latestArticleList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "top_article_cell", for: indexPath) as! TopArticleViewCell
+        let article = latestArticleList[indexPath.row]
+        
+        let url = article.image
+        if !url.isEmpty {
+            cell.thumbImageView.sd_setImage(with: URL(string: url))
+        } else {
+            cell.thumbImageView.image = nil
+        }
+        
+        cell.titleLabel.text = article.title
+        
+        let dateString = article.date
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ" //2023-05-06T18:25:28Z
+        var articleDate = ""
+        
+        if let date = dateFormatter.date(from: dateString) {
+            dateFormatter.dateFormat = "MMM dd, yyyy" //May 06, 2023
+            let readableDateString = dateFormatter.string(from: date)
+            articleDate = readableDateString
+        }
+        cell.subtitleLabel.text = "\(articleDate) · \(article.source)"
+        
+        return cell
     }
 }

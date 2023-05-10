@@ -124,11 +124,11 @@
                                             <outlet property="titleLabel" destination="na7-4m-i97" id="j7e-5M-SI7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="top_article_list_cell" rowHeight="319" id="wwg-YP-Bud" customClass="TopArticleListViewCell" customModule="ArticleApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="193.66666793823242" width="393" height="319"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="top_article_list_cell" rowHeight="367" id="wwg-YP-Bud" customClass="TopArticleListViewCell" customModule="ArticleApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="193.66666793823242" width="393" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wwg-YP-Bud" id="TJd-LD-PMp">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="319"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="367"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News for You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP1-GC-Gwy">
@@ -149,25 +149,60 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="OUo-yv-GXG"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R75-1A-dSM">
-                                                        <size key="itemSize" width="128" height="128"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R75-1A-dSM">
+                                                        <size key="itemSize" width="395" height="200"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BPO-wH-Xbk">
-                                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="top_article_cell" id="BPO-wH-Xbk" customClass="TopArticleViewCell" customModule="ArticleApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="395" height="200"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UHa-95-kaA">
-                                                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="395" height="200"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="uQg-TV-kya">
+                                                                        <rect key="frame" x="20" y="10" width="355" height="102.66666666666667"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="New Title New Title New Title New Title New Title New Title " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6b-Np-Zca">
+                                                                        <rect key="frame" x="20" y="122.66666666666667" width="355" height="42.333333333333329"/>
+                                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date &amp; Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSj-TB-Ch7">
+                                                                        <rect key="frame" x="20" y="169" width="355" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="MSj-TB-Ch7" firstAttribute="top" secondItem="G6b-Np-Zca" secondAttribute="bottom" constant="4" id="7CA-qd-q9W"/>
+                                                                    <constraint firstItem="uQg-TV-kya" firstAttribute="trailing" secondItem="G6b-Np-Zca" secondAttribute="trailing" id="BPX-DH-gru"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="MSj-TB-Ch7" secondAttribute="trailing" constant="20" id="GYX-xI-gV1"/>
+                                                                    <constraint firstItem="MSj-TB-Ch7" firstAttribute="trailing" secondItem="G6b-Np-Zca" secondAttribute="trailing" id="NOW-0a-gsQ"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="MSj-TB-Ch7" secondAttribute="bottom" constant="10" id="SEx-Q1-mxB"/>
+                                                                    <constraint firstItem="G6b-Np-Zca" firstAttribute="top" secondItem="uQg-TV-kya" secondAttribute="bottom" constant="10" id="ScR-bG-EIb"/>
+                                                                    <constraint firstItem="uQg-TV-kya" firstAttribute="top" secondItem="UHa-95-kaA" secondAttribute="top" constant="10" id="fOY-PU-sjU"/>
+                                                                    <constraint firstItem="uQg-TV-kya" firstAttribute="leading" secondItem="G6b-Np-Zca" secondAttribute="leading" id="kLK-bX-68D"/>
+                                                                    <constraint firstItem="MSj-TB-Ch7" firstAttribute="leading" secondItem="G6b-Np-Zca" secondAttribute="leading" id="s97-eH-yMg"/>
+                                                                    <constraint firstItem="MSj-TB-Ch7" firstAttribute="leading" secondItem="UHa-95-kaA" secondAttribute="leading" constant="20" id="vMu-YF-aqs"/>
+                                                                </constraints>
                                                             </collectionViewCellContentView>
+                                                            <size key="customSize" width="395" height="200"/>
+                                                            <connections>
+                                                                <outlet property="subtitleLabel" destination="MSj-TB-Ch7" id="w0E-F9-G0I"/>
+                                                                <outlet property="thumbImageView" destination="uQg-TV-kya" id="bny-V9-vf0"/>
+                                                                <outlet property="titleLabel" destination="G6b-Np-Zca" id="JX8-SY-Dwh"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
                                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hza-rD-fmW">
-                                                    <rect key="frame" x="20" y="279" width="353" height="40"/>
+                                                    <rect key="frame" x="20" y="279" width="353" height="88"/>
                                                     <color key="pageIndicatorTintColor" systemColor="separatorColor"/>
                                                     <color key="currentPageIndicatorTintColor" name="AccentColor"/>
                                                 </pageControl>
