@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     weak var refreshControl: UIRefreshControl!
     
     weak var pageControl: UIPageControl?
+    weak var collectionView: UICollectionView?
     
     var latestArticleList: [Article] = []
     
@@ -79,6 +80,9 @@ extension HomeViewController: UITableViewDataSource {
             cell.collectionView.dataSource = self
             cell.collectionView.delegate = self
             cell.collectionView.reloadData()
+            
+            self.collectionView = cell.collectionView
+            cell.delegate = self
             
             return cell
         } else {
@@ -194,5 +198,13 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
             let page = Int(scrollView.contentOffset.x / scrollView.frame.width)
             pageControl?.currentPage = page
         }
+    }
+}
+
+// MARK: - TopArticleListViewCellDelegate
+extension HomeViewController: TopArticleListViewCellDelegate {
+    func topArticleListViewCellPageControlValueChanged(_ cell: TopArticleListViewCell) {
+        let page = cell.pageControl.currentPage
+        collectionView?.scrollToItem(at: IndexPath(item: page, section: 0), at: .centeredHorizontally, animated: true)
     }
 }

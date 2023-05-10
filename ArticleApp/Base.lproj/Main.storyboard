@@ -205,6 +205,9 @@
                                                     <rect key="frame" x="20" y="335" width="353" height="32"/>
                                                     <color key="pageIndicatorTintColor" systemColor="separatorColor"/>
                                                     <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                                                    <connections>
+                                                        <action selector="pageControlValueChanged:" destination="wwg-YP-Bud" eventType="valueChanged" id="hbk-w4-C0F"/>
+                                                    </connections>
                                                 </pageControl>
                                             </subviews>
                                             <constraints>
