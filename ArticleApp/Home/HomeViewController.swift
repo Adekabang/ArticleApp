@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     weak var refreshControl: UIRefreshControl!
     
+    weak var pageControl: UIPageControl?
+    
     var latestArticleList: [Article] = []
     
     override func viewDidLoad() {
@@ -72,6 +74,7 @@ extension HomeViewController: UITableViewDataSource {
             cell.titleLabel.text = "Articles for You"
             cell.subtitleLabel.text = "Top \(latestArticleList.count) Articles for You"
             cell.pageControl.numberOfPages = latestArticleList.count
+            self.pageControl = cell.pageControl
             
             cell.collectionView.dataSource = self
             cell.collectionView.delegate = self
@@ -184,5 +187,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.width
         return CGSize(width: width, height: 256)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if scrollView != self.tableView {
+            let page = Int(scrollView.contentOffset.x / scrollView.frame.width)
+            pageControl?.currentPage = page
+        }
     }
 }
