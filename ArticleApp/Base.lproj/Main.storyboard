@@ -257,7 +257,11 @@
                             <constraint firstItem="kjg-RI-NSC" firstAttribute="bottom" secondItem="Zkn-6j-CSe" secondAttribute="bottom" constant="10" id="pCr-ra-T8t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="zuw-Xn-Oxx"/>
+                    <navigationItem key="navigationItem" title="Home" id="zuw-Xn-Oxx">
+                        <barButtonItem key="rightBarButtonItem" image="gear" catalog="system" style="plain" id="Koj-US-k1K">
+                            <color key="tintColor" systemColor="systemBlueColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Zkn-6j-CSe" id="JnQ-zn-cDt"/>
                     </connections>
@@ -325,6 +329,7 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
@@ -340,6 +345,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
