@@ -19,6 +19,7 @@
 		FF5429162A0837760027A1A4 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5429152A0837760027A1A4 /* Article.swift */; };
 		FF5429192A083A490027A1A4 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5429182A083A490027A1A4 /* ApiService.swift */; };
 		FF54291B2A0841C50027A1A4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54291A2A0841C50027A1A4 /* HomeViewController.swift */; };
+		FF662ED92A0B86DD0035154C /* TopArticleListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF662ED82A0B86DD0035154C /* TopArticleListViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FF5429152A0837760027A1A4 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		FF5429182A083A490027A1A4 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		FF54291A2A0841C50027A1A4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FF662ED82A0B86DD0035154C /* TopArticleListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArticleListViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				FF221CD92A08DAF80007EC27 /* ArticleViewCell.swift */,
 				FF54291A2A0841C50027A1A4 /* HomeViewController.swift */,
+				FF662ED82A0B86DD0035154C /* TopArticleListViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			files = (
 				FF5429002A0819180027A1A4 /* ViewController.swift in Sources */,
 				FF5428FC2A0819180027A1A4 /* AppDelegate.swift in Sources */,
+				FF662ED92A0B86DD0035154C /* TopArticleListViewCell.swift in Sources */,
 				FF5429192A083A490027A1A4 /* ApiService.swift in Sources */,
 				FF5428FE2A0819180027A1A4 /* SceneDelegate.swift in Sources */,
 				FF5429142A08370C0027A1A4 /* ArticleResponse.swift in Sources */,

@@ -124,7 +124,7 @@
                                             <outlet property="titleLabel" destination="na7-4m-i97" id="j7e-5M-SI7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="top_article_list_cell" rowHeight="319" id="wwg-YP-Bud">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="top_article_list_cell" rowHeight="319" id="wwg-YP-Bud" customClass="TopArticleListViewCell" customModule="ArticleApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="193.66666793823242" width="393" height="319"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wwg-YP-Bud" id="TJd-LD-PMp">
@@ -188,6 +188,12 @@
                                                 <constraint firstItem="peV-ur-Mwh" firstAttribute="leading" secondItem="TJd-LD-PMp" secondAttribute="leading" id="wBg-BE-EA2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="peV-ur-Mwh" id="nHl-ON-jh7"/>
+                                            <outlet property="pageControl" destination="hza-rD-fmW" id="Buf-BZ-gah"/>
+                                            <outlet property="subtitleLabel" destination="OHP-Wa-0g2" id="QV7-m3-vuC"/>
+                                            <outlet property="titleLabel" destination="sP1-GC-Gwy" id="g98-9z-bkS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

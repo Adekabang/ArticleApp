@@ -67,7 +67,12 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "top_article_list_cell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "top_article_list_cell", for: indexPath) as! TopArticleListViewCell
+            
+            cell.titleLabel.text = "Articles for You"
+            cell.subtitleLabel.text = "Top \(latestArticleList.count) Articles for You"
+            cell.pageControl.numberOfPages = latestArticleList.count
+            
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "custom_article_cell", for: indexPath) as! ArticleViewCell
@@ -104,6 +109,10 @@ extension HomeViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == 1 else {
+            return
+        }
+        
         let article =  latestArticleList[indexPath.row]
         
 //        let alert = UIAlertController(title: article.title, message: article.description, preferredStyle: .alert)
