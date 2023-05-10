@@ -59,6 +59,16 @@ class CoreDataStorage {
         let articleList = datas.compactMap { $0.dto }
         return articleList
     }
+    
+    func deleteReadingList(url: String) {
+        let fetchRequest = ArticleData.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "url == %@", url)
+        if let data = try? context.fetch(fetchRequest).first {
+            context.delete(data)
+            
+            try? context.save()
+        }
+    }
 }
 
 extension ArticleData {

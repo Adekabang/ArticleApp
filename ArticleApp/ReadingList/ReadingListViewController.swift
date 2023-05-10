@@ -80,4 +80,20 @@ extension ReadingListViewController: UITableViewDelegate {
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, completion in
+            let article = self.readingList.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            CoreDataStorage.shared.deleteReadingList(url: article.url)
+            completion(true)
+        }
+        if #available(iOS 13.0, *) {
+            deleteAction.image = UIImage(systemName: "trash")
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 }
